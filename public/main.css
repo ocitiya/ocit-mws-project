@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+
+*{
+    font-family: "Niramit", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    margin: 0 auto;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px auto auto 50px;
+}
+
+.menu{
+    background: lightblue;
+    grid-column: 1/4;
+    display: grid;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: 0px 2px 0px #dedede;
+}
+
+.sidebar{
+    grid-row: 2/3;
+    display: grid;
+}
+
+.sidebar img{
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 4px 4px 0px #dedede;
+    margin: auto;
+}
+
+.konten{
+    grid-column: 2/4;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    display: grid;
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.1);
+}
+
+.footer{
+    background: #be8bff;
+    grid-column: 1/4;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.footer a{
+    display: grid;
+}
+
+.footer a img{
+    border: dashed 2px;
+    padding: 2px;
+}
+
+.menu img{
+    border-radius: 50%;
+}
