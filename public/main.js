@@ -34,7 +34,7 @@ buatKonten = () => {
 
             const a_konten1 = document.createElement("a");
             a_konten1.className = "button-konten";
-            a_konten1.innerHTML = "Menjumlahkan 2 angka";
+            a_konten1.innerHTML = "Kalkulator";
             a_konten1.href = "kalkulator"
             konten1.append(a_konten1);
 
