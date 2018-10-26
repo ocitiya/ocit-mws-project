@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+
+*{
+    font-family: "Niramit", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.kalkulator{
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 40px;
+    background-color: white;
+}
+
+.system{
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    display: grid;
+}
+
+.system input{
+    text-align: center;
+    border: unset;
+}
+
+.system button{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.system button:hover{
+    background-color: gray;
+}
+
+#footer{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}

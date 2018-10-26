@@ -1,10 +1,10 @@
 // Created by Muhammad Rasyidi
 
 document.addEventListener("DOMContentLoaded", (e) => {
-    createContent();
+    buatKonten();
 });
 
-createContent = () => {
+buatKonten = () => {
     const container = document.getElementById("container");
     container.className = "container";
 
@@ -30,13 +30,23 @@ createContent = () => {
 
         const konten1 = document.createElement("div");
         konten1.className = "konten";
-        konten1.innerHTML = "Menjumlahkan 2 angka";
         container.append(konten1);
+
+            const a_konten1 = document.createElement("a");
+            a_konten1.className = "button-konten";
+            a_konten1.innerHTML = "Menjumlahkan 2 angka";
+            a_konten1.href = "kalkulator"
+            konten1.append(a_konten1);
 
         const konten2 = document.createElement("div");
         konten2.className = "konten";
-        konten2.innerHTML = "Lokasi istimewa dengan mapbox";
         container.append(konten2);
+
+            const a_konten2 = document.createElement("a");
+            a_konten2.className = "button-konten";
+            a_konten2.innerHTML = "Lokasi istimewa dengan mapbox";
+            a_konten2.href = "peta"
+            konten2.append(a_konten2);
 
         const footer = document.createElement("footer");
         footer.className = "footer";

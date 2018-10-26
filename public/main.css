@@ -66,3 +66,17 @@
 .menu img{
     border-radius: 50%;
 }
+
+.button-konten{
+    background-color: white;
+    border: 1px solid #673AB7;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-konten:hover{
+    background-color: #E91E63;
+    color: white;
+}
