@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 	let trigger = document.getElementsByClassName("trigger");
 	Array.from(trigger).forEach(function(e){
-		e.addEventListener("click", gantiOperator);
-		e.operator = e.innerHTML;
+		e.addEventListener("click", function(){
+			document.getElementById("operator").innerHTML = e.innerHTML;
+		});
 	});
 });
 
@@ -77,10 +78,6 @@ buatKonten = () => {
 			button.id = "hasil";
 			button.innerHTML = "=";
 			system.append(button);
-}
-
-gantiOperator = (op) => {
-	document.getElementById("operator").innerHTML = op.target.operator;
 }
 
 hitung = () => {
