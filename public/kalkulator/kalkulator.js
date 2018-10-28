@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 	hasil.addEventListener("click", hitung);	
 
 	let trigger = document.getElementsByClassName("trigger");
-	Array.from(trigger).forEach(function(e){
-		e.addEventListener("click", function(){
+	Array.from(trigger).forEach((e) => {
+		e.addEventListener("click", () => {
 			document.getElementById("operator").innerHTML = e.innerHTML;
 		});
 	});

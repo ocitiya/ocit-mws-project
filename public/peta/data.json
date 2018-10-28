@@ -1,0 +1,48 @@
+{
+    "restoran": [{
+        "id": 1,
+        "nama": "Bakso Pakde",
+        "gambar": "bakso.jpg",
+        "latlng": {
+            "lat": -6.47361,
+            "lng": 106.83015
+        },
+        "review": "Bakso pakde memang mantab"
+    }, {
+        "id": 2,
+        "nama": "Nasi Goreng 1",
+        "gambar": "nasi_goreng_1.jpg",
+        "latlng": {
+            "lat": -6.51153,
+            "lng": 106.82264
+        },
+        "review": "Nasi gorengnya enak"
+    }, {
+        "id": 3,
+        "nama": "Nasi Goreng 2",
+        "gambar": "nasi_goreng_2.jpg",
+        "latlng": {
+            "lat": -6.51335,
+            "lng": 106.82322
+        },
+        "review": "Hmm, enak ya"
+    }, {
+        "id": 4,
+        "nama": "Gado-gado",
+        "gambar": "gado-gado.jpg",
+        "latlng": {
+            "lat": -6.51267,
+            "lng": 106.82268
+        },
+        "review": "Bikin lapar siang hari nih"
+    }, {
+        "id": 5,
+        "nama": "Ketoprak",
+        "gambar": "ketoprak.jpg",
+        "latlng": {
+            "lat": -6.51355,
+            "lng": 106.82331
+        },
+        "review": "Pagi suka beli disini"
+    }]
+}
