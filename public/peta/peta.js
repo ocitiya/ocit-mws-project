@@ -61,7 +61,6 @@ buatPeta = () => {
     var markersLayer = new L.LayerGroup();
     peta.addLayer(markersLayer);
 
-
     DBHelper.ambilRestoran((error, restoran) => {
         if(error){
             alert(`Ambil koordinat gagal dengan pesan '${error}'`);

@@ -10,8 +10,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
 	Array.from(trigger).forEach((e) => {
 		e.addEventListener("click", () => {
 			document.getElementById("operator").innerHTML = e.innerHTML;
+			let input = document.querySelectorAll("input");
+			if(input[2].value !== ""){
+				input[0].value = input[2].value;
+				input[1].value = "";
+				input[2].value = "";
+			}
 		});
 	});
+
+	let clear = document.getElementById("clear");
+	clear.addEventListener("click", clearNilai);
 });
 
 buatKonten = () => {
@@ -78,12 +87,18 @@ buatKonten = () => {
 			button.id = "hasil";
 			button.innerHTML = "=";
 			system.append(button);
+
+			const button_clear = document.createElement("button");
+			button_clear.id = "clear";
+			button_clear.className = "clear";
+			button_clear.innerHTML = "C";
+			system.append(button_clear);
 }
 
 hitung = () => {
 	let input = document.querySelectorAll("input");
-	let a1 = parseInt(input[0].value);
-	let a2 = parseInt(input[1].value);
+	let a1 = parseFloat(input[0].value);
+	let a2 = parseFloat(input[1].value);
 
 	let op = document.getElementById("operator").innerHTML;
 	let operator = {
@@ -93,5 +108,12 @@ hitung = () => {
 		"*": (a, b) => a * b
 	}
 
-	input[2].value = operator[op](a1, a2);
+	input[2].value = parseFloat(operator[op](a1, a2)).toFixed(2);
+}
+
+clearNilai = () => {
+	let input = document.querySelectorAll("input");
+	Array.from(input).forEach((e) => {
+		e.value = "";
+	});
 }

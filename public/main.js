@@ -44,7 +44,7 @@ buatKonten = () => {
 
             const a_konten2 = document.createElement("a");
             a_konten2.className = "button-konten";
-            a_konten2.innerHTML = "Lokasi istimewa dengan mapbox";
+            a_konten2.innerHTML = "Restoran Review (Peta)";
             a_konten2.href = "peta"
             konten2.append(a_konten2);
 
