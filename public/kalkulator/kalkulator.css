@@ -24,6 +24,7 @@ body{
     grid-template-columns: repeat(5, 1fr);
     text-align: center;
     display: grid;
+    align-items: center;
 }
 
 .system input{
@@ -49,4 +50,14 @@ body{
 
 .clear{
     grid-column: 1/6;
+}
+
+button{
+    min-height: 48px;
+    min-width: 48px;
+}
+
+input{
+    min-height: 48px;
+    min-width: 48px;
 }

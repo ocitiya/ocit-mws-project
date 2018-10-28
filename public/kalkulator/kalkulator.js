@@ -54,8 +54,6 @@ buatKonten = () => {
 
 			system.append("=");
 
-			system.append(" ");
-
 			const input3 = document.createElement("input");
 			input3.type = "text";
 			input3.size = "5";
