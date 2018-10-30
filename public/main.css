@@ -36,6 +36,14 @@
     margin: auto;
 }
 
+a{
+    min-width: 48px;
+    min-height: 48px;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+}
+
 .konten{
     grid-column: 2/4;
     justify-content: center;
