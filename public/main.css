@@ -6,33 +6,39 @@
     padding: 0;
 }
 
+body{
+    background: url('images/blooming-blur-close-up-459059_720.jpg') no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .container{
     display: grid;
     margin: 0 auto;
-    height: 100vh;
-    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;    
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 50px calc(50% - 50px) calc(50% - 50px) 50px;
+    background-color: #0006;
 }
 
 .menu{
     background: lightblue;
     grid-column: 1/4;
     display: grid;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
     align-items: center;
     padding-left: 20px;
-    box-shadow: 0px 2px 0px #dedede;
+    border-bottom: 1px solid #0000004d;
 }
 
 .sidebar{
-    grid-row: 2/3;
+    grid-row: 2/4;
     display: grid;
 }
 
 .sidebar img{
-    max-width: 90%;
-    max-height: 90%;
-    box-shadow: 4px 4px 0px #dedede;
+    max-width: 200px;
+    max-height: 200px;
+    box-shadow: 4px 4px 0px #dedede66;
     margin: auto;
 }
 
@@ -48,18 +54,18 @@ a{
     grid-column: 2/4;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid rgba(0,0,0,0.1);
     display: grid;
-    box-shadow: 0px 1px 0px rgba(0,0,0,0.1);
+    background-color: #0000004d;
 }
 
 .footer{
-    background: #be8bff;
+    background: #be8bffe6;
     grid-column: 1/4;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    border-top: 1px solid #0000004d;
 }
 
 .footer a{
@@ -69,6 +75,10 @@ a{
 .footer a img{
     border: dashed 2px;
     padding: 2px;
+}
+
+.footer a img:hover{
+    border-color: white;
 }
 
 .menu img{
@@ -81,6 +91,7 @@ a{
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 4px 4px 0px #dedede66;
     text-decoration: none;
 }
 

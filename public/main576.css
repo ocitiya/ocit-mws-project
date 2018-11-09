@@ -1,0 +1,17 @@
+body{
+    font-size: 0.8em;
+}
+
+.konten{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-row: 3/4;
+    grid-column: unset;
+}
+
+.sidebar{
+    grid-row: 2/3;
+    display: grid;
+    grid-column: 1/3;
+}

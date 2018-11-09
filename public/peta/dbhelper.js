@@ -5,19 +5,21 @@ class DBHelper{
     }
 
     static ambilRestoran(callback){
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", DBHelper.DATABASE_URL);
-        xhr.onload = () => {
-            if(xhr.status === 200){
-                const json = JSON.parse(xhr.responseText);
-                const restoran = json.restoran;
-                callback(null, restoran);
-            } else {
-                const error = (`Permintaan gagal. Status ${xhr.status}`);
+        fetch(DBHelper.DATABASE_URL, {
+            method: 'GET'
+        }).then((res) => {
+            if(res.status != 200){
+                let error = (`Permintaan gagal. Status ${xhr.status}`);
                 callback(error, null);
+            } else if(res.status === 200){
+                return res.json();
             }
-        };
-        xhr.send();
+        }).then((data) => {
+            let restoran = data.restoran;
+            callback(null, restoran);
+        }).catch((err) => {
+            callback(err, null);
+        });
     }
 
     static ambilRestoranByID(id, callback){

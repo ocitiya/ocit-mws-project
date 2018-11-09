@@ -21,11 +21,16 @@ buatKonten = () => {
         tempat_gambar.innerHTML = "Gambar disini";
         konten.append(tempat_gambar);
 
-        const tempat_review = document.createElement("div")
+        const tempat_review = document.createElement("div");
         tempat_review.id = "tempat-review";
         tempat_review.className = "tempat-review";
-        tempat_review.innerHTML = "Tulis review disini";
+        tempat_review.innerHTML = "Review disini";
         konten.append(tempat_review);
+
+        const footer = document.createElement('div');
+        footer.className = 'footer';
+        konten.append(footer);
+        footer.innerText = 'Muhammad Rasyidi';
 }
 
 buatPeta = () => {
@@ -96,25 +101,27 @@ tampilDataRestoran = (id) => {
         if(error){
             alert(`Gagal mengambil gambar dengan status '${error}'`);
         } else {
-            const tempat_review = document.getElementById("tempat-review");
+            const tempat_review = document.querySelector("#tempat-review");
             tempat_review.innerHTML =
                 `<b>Nama tempat: ${restoran[0].nama}</b>`+
                 `<hr>`+
                 `Review:<br/>`+
                 `${restoran[0].review}`;
 
-            const tempat_gambar = document.getElementById("tempat-gambar");
+            const tempat_gambar = document.querySelector("#tempat-gambar");
             tempat_gambar.innerHTML = "";
 
                 const gambar = document.createElement("img");
                 gambar.className = "gambar";
-                gambar.src = `../images/peta/${restoran[0].gambar}`;
+                setTimeout(() => {
+                    gambar.src = `../images/peta/${restoran[0].gambar}`;
+                }, 100);
                 tempat_gambar.append(gambar);
 
-                const footer = document.createElement("div");
-                footer.className = "footer";
-                footer.innerHTML = "<small>*Google Image</small>";
-                tempat_gambar.append(footer);
+                const footerImage = document.createElement("div");
+                footerImage.className = "footer-image";
+                footerImage.innerHTML = "<small>*Google Image</small>";
+                tempat_gambar.append(footerImage);
         }
     });
 }
