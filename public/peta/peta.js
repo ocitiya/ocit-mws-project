@@ -109,13 +109,17 @@ tampilDataRestoran = (id) => {
                 `${restoran[0].review}`;
 
             const tempat_gambar = document.querySelector("#tempat-gambar");
-            tempat_gambar.innerHTML = "";
+            while(tempat_gambar.firstChild){
+                tempat_gambar.removeChild(tempat_gambar.firstChild);
+            }
 
                 const gambar = document.createElement("img");
                 gambar.className = "gambar";
-                setTimeout(() => {
-                    gambar.src = `../images/peta/${restoran[0].gambar}`;
-                }, 100);
+                gambar.style.minHeight = '200px';
+                gambar.style.minWidth = '200px';
+                gambar.style.maxHeight = '100%';
+                gambar.style.maxWidth = '100%';
+                gambar.src = `../images/peta/${restoran[0].gambar}`;
                 tempat_gambar.append(gambar);
 
                 const footerImage = document.createElement("div");
