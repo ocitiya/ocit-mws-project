@@ -21,6 +21,18 @@ body{
     background-color: #0006;
 }
 
+#offline{
+    background-color: red;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    opacity: 0.3;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    z-index: 401;
+}
+
 .menu{
     background: lightblue;
     grid-column: 1/4;

@@ -16,6 +16,18 @@ body{
     background-size: cover;
 }
 
+#offline{
+    background-color: red;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    opacity: 0.3;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    z-index: 401;
+}
+
 .kalkulator{
     border: 1px solid rgba(0,0,0,0.3);
     padding: 40px;
