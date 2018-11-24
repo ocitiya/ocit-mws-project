@@ -1,5 +1,6 @@
 {
   "name": "ocitmws",
+  "short_name": "oMWS",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
