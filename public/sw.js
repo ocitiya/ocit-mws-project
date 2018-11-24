@@ -6,23 +6,7 @@ self.addEventListener('install', e => {
     e.waitUntil(
         caches.open(namaCache).then(async cache => {
             return cache.addAll([
-                '/register_sw.js',
-                '/main.js',
-                '/main.css',
-                '/main576.css',
-                '/index.html',
-                '/404.html',
-                '/images/offline/no_image.jpg',
-                '/images/blooming-blur-close-up-459059_720.jpg',
-                '/kalkulator/index.html',
-                '/peta/peta576.css',
-                '/peta/peta.js',
-                '/peta/peta.css',
-                '/peta/index.html',
-                '/peta/dbhelper.js',
-                '/peta/data.json',
-                '/kalkulator/kalkulator.js',
-                '/kalkulator/kalkulator.css',
+                '/*'
             ]).catch(err => {
                 console.log(`Gagal membuka cache, error: ${err}`);
             });
