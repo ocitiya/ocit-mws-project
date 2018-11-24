@@ -31,11 +31,6 @@ self.addEventListener('install', e => {
 });
 
 self.addEventListener('fetch', e => {
-    if(navigator.onLine === false){
-        console.log('offline');
-        offline = true;
-    }
-
     e.respondWith(
         caches.match(e.request).then(res => {
             return res || fetch(e.request).then(async fetchResponse => {
@@ -67,6 +62,9 @@ self.addEventListener('activate', e => {
                     return caches.delete(namaCache);
                 })
             )
+        }).then(() => {
+            console.log(`Mengambil versi terbaru `);
+            return self.clients.claim();
         })
     )
 });
