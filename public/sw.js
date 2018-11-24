@@ -46,7 +46,7 @@ self.addEventListener('fetch', e => {
             if(e.request.url.includes('.jpg')){
                 return caches.match('/images/offline/no_image.jpg');
             }
-
+            
             return new Promise('Tidak terkoneksi ke internet', {
                 status: 404,
                 statusText: 'Tidak terkoneksi ke internet'
