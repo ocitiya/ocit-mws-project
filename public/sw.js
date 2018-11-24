@@ -1,6 +1,8 @@
 const namaCache = 'ocitmws';
 
 self.addEventListener('install', e => {
+    self.skipWaiting();
+
     e.waitUntil(
         caches.open(namaCache).then(async cache => {
             return cache.addAll([
